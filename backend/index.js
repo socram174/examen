@@ -3,6 +3,8 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import User from './models/User.js';
+import userRoutes from './routes/user.js';
+import reservaRoutes from './routes/reserva.js';
 
 
 const app = express();
@@ -10,6 +12,9 @@ const app = express();
 app.use(bodyParser.json({limit:"30mb", extended:true}));
 app.use(bodyParser.urlencoded({limit:"30mb", extended:true}));
 app.use(cors());
+
+app.use('/api/users', userRoutes);
+app.use('/api/reservas', reservaRoutes);
 
 app.get('/', (req, res) => {
     
