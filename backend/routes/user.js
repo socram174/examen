@@ -12,11 +12,11 @@ import {
 } from '../controllers/user.js';
 
 // Define las rutas para usuarios
-router.post('/usuarios', crearUsuario);
-router.get('/usuarios', obtenerUsuarios);
+router.post('/', crearUsuario);
+router.get('/', obtenerUsuarios);
 router.get('/usuarios/:id', obtenerUsuario);
 //router.put('/usuarios/:id', actualizarUsuario);
-router.delete('/usuarios/:id', eliminarUsuario);
+router.delete('/:id', eliminarUsuario);
 
 export default router;
 
