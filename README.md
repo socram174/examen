@@ -1,0 +1,1 @@
+### hacer npm install en las carpetas backend y frontend/admin  tener instalado el Comunitty server y mongosh de mongodb
